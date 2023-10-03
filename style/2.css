@@ -1,0 +1,493 @@
+html {
+    font-family: 'Rubik Iso', cursive;
+    font-size: 18px;
+}
+
+@font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+
+body {
+    background-color: #141114;
+    background-image: linear-gradient(335deg, black 23px, transparent 23px),
+        linear-gradient(155deg, black 23px, transparent 23px),
+        linear-gradient(335deg, black 23px, transparent 23px),
+        linear-gradient(155deg, black 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+   
+}
+
+.sign {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-image: radial-gradient(ellipse 50% 35% at 50% 50%,
+            #6b1839,
+            transparent);
+    transform: translate(-50%, -50%);
+    letter-spacing: 2;
+    left: 50%;
+    top: 50%;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 6em;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    22%,
+    36%,
+    75% {
+        color: #ffe6ff;
+        text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+            -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+            0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+
+    28%,
+    33% {
+        color: #ff65bd;
+        text-shadow: none;
+    }
+
+    82%,
+    97% {
+        color: #ff2483;
+        text-shadow: none;
+    }
+}
+
+.flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+    0% {
+        color: #6b1839;
+        text-shadow: none;
+    }
+
+    100% {
+        color: #ffe6ff;
+        text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+            -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+            0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+}
+
+@keyframes flicker {
+    from {
+        opacity: 1;
+    }
+
+    4% {
+        opacity: 0.9;
+    }
+
+    6% {
+        opacity: 0.85;
+    }
+
+    8% {
+        opacity: 0.95;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    11% {
+        opacity: 0.922;
+    }
+
+    12% {
+        opacity: 0.9;
+    }
+
+    14% {
+        opacity: 0.95;
+    }
+
+    16% {
+        opacity: 0.98;
+    }
+
+    17% {
+        opacity: 0.9;
+    }
+
+    19% {
+        opacity: 0.93;
+    }
+
+    20% {
+        opacity: 0.99;
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    26% {
+        opacity: 0.94;
+    }
+
+    28% {
+        opacity: 0.98;
+    }
+
+    37% {
+        opacity: 0.93;
+    }
+
+    38% {
+        opacity: 0.5;
+    }
+
+    39% {
+        opacity: 0.96;
+    }
+
+    42% {
+        opacity: 1;
+    }
+
+    44% {
+        opacity: 0.97;
+    }
+
+    46% {
+        opacity: 0.94;
+    }
+
+    56% {
+        opacity: 0.9;
+    }
+
+    58% {
+        opacity: 0.9;
+    }
+
+    60% {
+        opacity: 0.99;
+    }
+
+    68% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.9;
+    }
+
+    72% {
+        opacity: 0.95;
+    }
+
+    93% {
+        opacity: 0.93;
+    }
+
+    95% {
+        opacity: 0.95;
+    }
+
+    97% {
+        opacity: 0.93;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+* {
+    box-sizing: border-box;
+        margin: 0;
+        padding: 10px;
+}
+                                                                                /* header */
+                                                                                /* button */
+ 
+    .ops {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    font-family: 'Rubik Iso',
+        cursive;
+    background-color: #00ff22c7;
+    color: #ffffff;
+    cursor: grab;
+    transition: all 1000ms;
+}
+.ops2 {
+    margin: 0;
+    padding: 50px 0px;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color :#360e8d00;
+    color: #ffffff;
+    cursor: grab;
+    transition: all 1000ms;
+} 
+                                                                                /* up link */
+.nav {
+    padding: 20px 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.logo_text {
+    margin-left: 10px;
+    text-transform: uppercase;
+
+}
+
+.navbar_link {
+    padding: 0px 0;
+    margin: 20px;
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    cursor: grab;
+}
+.navbar_link2 {   
+    margin: 50px  ;
+   
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    cursor: grab;
+}
+                                                                                       /* Face */
+.welcome {
+color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.welcome_text {
+    margin: 40px;
+    justify-content: left;
+    align-items: center;
+  font-size: 30px;
+ 
+}
+.lol{
+color: #00ff00;
+}
+
+.cta_button {
+    
+    padding: 20px ;
+    width: 150px;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #02b3ff;
+    color: #ffffff;
+    cursor: grab;
+    transition: all 1000ms;
+}
+.welcome2 {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.welcome_text2 {
+    margin: 40px;
+    justify-content: right;
+    align-items: center;
+    font-size: 30px;
+
+}
+
+.lol2 {
+    color: #00ff00;
+}
+
+.btn {
+
+--hue: 190;
+    position: relative;
+    padding: 0.375rem 0.75rem;
+    margin: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgb(0, 255, 119);
+    text-decoration: none;
+    background-color: hsl(var(--hue), 100%, 41%);
+    border: 1px solid hsl(var(--hue), 100%, 41%);
+    border-radius: 10px;
+    outline: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    transition: 0.75s;
+
+    &:hover {
+        background: #2b00ff}
+}
+ &-fill {
+     &:hover {
+         background: #00ff00;
+         box-shadow: inset 0 0 0 2em hsl(var(--hue), 100%, 41%);
+     }
+ }
+/* img */
+.greetink {
+
+    margin: 50px;
+    padding: -50px;
+    box-sizing: border-box;
+    width: 450px;
+    height: 450px;
+    border-radius: 100px;
+
+}
+.greetink2 {
+
+    margin: 50px;
+    padding: -50px;
+    box-sizing: border-box;
+    width: 600px;
+    height: 600px;
+    border-radius: 100px;
+
+}
+.img{
+    width: 100px;
+    border-radius: 50px;
+}
+.img2{
+    width: 200px;
+}
+
+.offer {
+    padding: 50px 4vw;
+   
+}
+.section_title {
+    color: #00b3ff;
+    font-size: 40px;
+    margin: 30px auto;
+    border-top: 4px solid rgb(255, 158, 231);
+    width: fit-content;
+    padding: 20px;
+}
+.offer_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+.offer_card {
+    width: 200px;
+ 
+  background-color: #f6f6f6bb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+
+.modal {
+    padding: 75px;
+    box-shadow: 0 0 20px 0 #999;
+}
+
+.modal-calam {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+}
+
+.modal-close {
+    cursor: grab;
+    text-align: right;
+}
+
+.video-container {
+    margin-top: 15px;
+}
+.footer {
+    padding: 0px;
+    text-align: center;
+    border: 5px solid #ffffff;
+    background: linear-gradient(180deg, #d30bb560 0%, #000000 80%);
+    color: #000000;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+
+
+.footer-right {
+    display: flex;
+
+}
+
+.footer-list {
+    padding: 0px;
+    margin: 0px;
+
+
+}
+
+.footer-list ul li a {
+    color: #fff;
+    display: block;
+    padding: 15px 20px;
+    padding-left: 0;
+    text-decoration: none;
+}
